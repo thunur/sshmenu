@@ -2,8 +2,8 @@ package menu
 
 import (
 	"fmt"
+	"github.com/thunur/sshmenu/internal/config"
 	"os"
-	"sshmenu/internal/config"
 	"strconv"
 	"strings"
 

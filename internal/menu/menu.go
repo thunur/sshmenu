@@ -1,7 +1,7 @@
 package menu
 
 import (
-	"sshmenu/internal/config"
+	"github.com/thunur/sshmenu/internal/config"
 
 	"github.com/manifoldco/promptui"
 )

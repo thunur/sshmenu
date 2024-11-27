@@ -28,6 +28,10 @@ go build -o sshmenu main.go
 ./sshmenu
 ```
 
+```bash
+go install github.com/thunur/sshmenu@latest
+```
+
 This will directly show the server selection menu.
 这将直接显示服务器选择菜单。
 

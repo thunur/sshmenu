@@ -4,9 +4,10 @@ import (
 	"flag"
 	"fmt"
 	"os"
-	"sshmenu/internal/config"
-	"sshmenu/internal/menu"
-	"sshmenu/internal/ssh"
+
+	"github.com/thunur/sshmenu/internal/config"
+	"github.com/thunur/sshmenu/internal/menu"
+	"github.com/thunur/sshmenu/internal/ssh"
 
 	"github.com/manifoldco/promptui"
 )

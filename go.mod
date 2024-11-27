@@ -1,4 +1,4 @@
-module sshmenu
+module github.com/thunur/sshmenu
 
 go 1.22.9
 

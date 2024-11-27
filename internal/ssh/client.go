@@ -2,8 +2,8 @@ package ssh
 
 import (
 	"fmt"
+	"github.com/thunur/sshmenu/internal/config"
 	"os"
-	"sshmenu/internal/config"
 
 	"golang.org/x/crypto/ssh"
 )
