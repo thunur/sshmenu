@@ -40,6 +40,14 @@ This will directly show the server selection menu.
 Enter management mode to add or delete servers.
 进入管理模式以添加或删除服务器。
 
+## Configuration 配置
+
+The configuration file is stored at `~/.sshmenu/config.json`
+配置文件存储在 `~/.sshmenu/config.json`
+
+Example configuration 配置示例:
+
+
 ```json
 {
   "servers": [
@@ -60,12 +68,6 @@ Enter management mode to add or delete servers.
   ]
 }
 ```
-## Configuration 配置
-
-The configuration file is stored at `~/.sshmenu/config.json`
-配置文件存储在 `~/.sshmenu/config.json`
-
-Example configuration 配置示例:
 
 ## Key Bindings 快捷键
 
