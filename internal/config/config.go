@@ -13,8 +13,8 @@ type SSHConfig struct {
 	Host     string `json:"host"`
 	User     string `json:"user"`
 	Port     int    `json:"port"`
-	KeyPath  string `json:"key_path,omitempty"`
-	Password string `json:"password,omitempty"`
+	KeyPath  string `json:"key_path,omitempty" mapstructure:"key_path"`
+	Password string `json:"password,omitempty" mapstructure:"password"`
 }
 
 type Config struct {
