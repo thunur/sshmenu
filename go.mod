@@ -1,6 +1,6 @@
 module github.com/thunur/sshmenu
 
-go 1.22.9
+go 1.22
 
 require (
 	github.com/manifoldco/promptui v0.9.0
