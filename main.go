@@ -15,6 +15,7 @@ import (
 func main() {
 	// 定义命令行参数
 	isManage := flag.Bool("m", false, "进入管理模式")
+	alias := flag.String("alias", "", "通过别名直接连接服务器")
 	flag.Parse()
 
 	// 初始化配置
@@ -43,6 +44,15 @@ func main() {
 			fmt.Fprintf(os.Stderr, "重新加载配置失败: %v\n", err)
 			os.Exit(1)
 		}
+	}
+
+	// 如果指定了别名，直接通过别名连接
+	if *alias != "" {
+		if err := handleAliasConnect(configs, *alias); err != nil {
+			fmt.Fprintf(os.Stderr, "连接失败: %v\n", err)
+			os.Exit(1)
+		}
+		return
 	}
 
 	if *isManage {
@@ -149,4 +159,21 @@ func handleAddServer() error {
 
 	fmt.Printf("成功添加服务器 '%s'\n", server.Name)
 	return nil
+}
+
+func handleAliasConnect(configs []config.SSHConfig, alias string) error {
+	// 查找匹配的服务器配置
+	var selected *config.SSHConfig
+	for i := range configs {
+		if configs[i].Name == alias {
+			selected = &configs[i]
+			break
+		}
+	}
+
+	if selected == nil {
+		return fmt.Errorf("未找到别名为 '%s' 的服务器", alias)
+	}
+
+	return ssh.Connect(selected)
 }
